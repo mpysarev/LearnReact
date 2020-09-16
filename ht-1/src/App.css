@@ -1,0 +1,23 @@
+.header {
+  border: 1px solid #000;
+  min-height: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.leftMenu {
+  border: 1px solid #000;
+  width: 20%;
+  height: calc(100vh - 65px);
+  display: inline-block;
+  text-align: center;
+}
+
+.content {
+  border: 1px solid #000;
+  width: 78%;
+  height: calc(100vh - 65px);
+  display: inline-block;
+  margin-left: 10px;
+  text-align: center;
+}
