@@ -59,7 +59,7 @@ export default class App extends Component {
         <TodoList todos={this.state.todoListItems} 
                   onToggle={this.toggleTodo}
                   onDelete={this.deleteTodo}/>
-        <TodoForm onAddBtn={this.addTodo}/>
+        <TodoForm onAddBtnClick={this.addTodo}/>
       </>
     )
   }

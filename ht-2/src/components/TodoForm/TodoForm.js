@@ -21,16 +21,18 @@ export default class TodoForm extends Component {
         })
     }
 
+    addTask = (e)=> {
+        this.props.onAddBtnClick(this.state);
+
+        e.preventDefault();
+        this.clearInput();
+    }
+
     render() {
         return (
             <form className="form">
                 <input className="input" type="text" value={this.state.title} onChange={this.change}></input>
-                <input type="submit" value="Add task" className="add-btn" onClick={(e)=> {
-                    this.props.onAddBtn(this.state);
-
-                    e.preventDefault();
-                    this.clearInput();
-                }}></input>
+                <input type="submit" value="Add task" className="add-btn" onClick={this.addTask}></input>
             </form>
         )
     }
