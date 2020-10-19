@@ -7,6 +7,8 @@ import './App.css';
 function App() {
 
   const [noteList, setNoteList] = useState([]);
+
+  // console.log(noteList)
   
   useEffect(()=>{
     noteService.get('/')
@@ -20,7 +22,8 @@ function App() {
     }
 
     noteService.post('/', newNote).then(({data}) => {
-      setNoteList([...noteList, data])
+      setNoteList([...noteList, data]);
+      console.log(data);
     })
   }
 
@@ -32,7 +35,6 @@ function App() {
   }
 
   function saveNote(note) {
-
     noteService.put('/' + note.id, note).then(({data})=> {
       let newNoteList = noteList.map((item) => item.id === data.id ? data : item)
       

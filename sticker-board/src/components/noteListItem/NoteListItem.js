@@ -11,7 +11,9 @@ function NoteListItem({note, deleteNote, saveNote}) {
         return {...note}
     }
 
-    function onDeleteBtnClick() {
+    function onDeleteBtnClick(e) {
+        e.stopPropagation();
+        
         deleteNote(note);
     }
 
