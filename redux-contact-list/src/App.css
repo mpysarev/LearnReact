@@ -1,0 +1,25 @@
+.app-header {
+    background-color: #282c34;
+    text-align: center;
+    padding: 10px 0;
+    font: 400 26px sans-serif;
+    color: white;
+  }
+  
+  .contact-list-container {
+    width: 38%;
+    float: left;
+    padding: 0 5px;
+  }
+  
+  .contact-form-container {
+    width: 58%;
+    float: left;
+  }
+  
+  .add-btn {
+    width: 100%;
+    font-size: 30px;
+    background-color: #fff;
+    padding: 15px;
+}
