@@ -1,0 +1,25 @@
+.todo-item {
+    background-color: grey;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+}
+
+.todo-item.done {
+    background-color: green;
+}
+
+.todo-item .delete-btn {
+    float: right;
+    border-radius: 5px;
+    padding: 0 4px;
+    background-color: white;
+    /* cursor: pointer; */
+}
+
+.todo-item .delete-btn:hover {
+    background-color: red;
+}

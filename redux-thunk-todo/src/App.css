@@ -1,0 +1,9 @@
+.todo-header {
+    width: 100%;
+    padding: 10px 0;
+    background: rgba(60, 99, 158, 0.952);
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 18px;
+}
