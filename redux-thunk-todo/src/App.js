@@ -27,8 +27,8 @@ function App({todoList,
     deleteTodo(id)
   }
 
-  function toggleTask (payload) {
-    toggleTodo(payload);
+  function toggleTask (todo) {
+    toggleTodo(todo);
   }
 
   return (

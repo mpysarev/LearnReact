@@ -9,11 +9,7 @@ function TodoItem({todo, deleteTask, toggleTask}) {
     }
 
     function onTodoClick() {
-        // console.log(todo);
-        const newTodo = {...todo};
-        newTodo.isDone = !newTodo.isDone;
-        // console.log(newTodo);
-        toggleTask(newTodo);
+        toggleTask(todo);
     }
 
     return (

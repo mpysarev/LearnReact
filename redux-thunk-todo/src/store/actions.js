@@ -15,7 +15,7 @@ const toggleTask = (payload) => ({type: TOGGLE_TODO, payload})
 
 
 export const getTodos = () => {
-    return function(dispatch) {
+    return (dispatch) => {
         todoService.get('/').then(({data}) => {
             dispatch(setTodos(data));
         })
@@ -23,7 +23,7 @@ export const getTodos = () => {
 }
 
 export const createTodo = (todo) => {
-    return function(dispatch) {
+    return (dispatch) => {
         todoService.post('/', todo).then(({data}) => {
             dispatch(addTask(data));
         })
@@ -31,15 +31,18 @@ export const createTodo = (todo) => {
 }
 
 export const deleteTodo = (id) => {
-    return function(dispatch) {
+    return (dispatch) => {
         todoService.delete('/' + id);
         dispatch(deleteTask(id));
     }
 }
 
 export const toggleTodo = (todo) => {
-    return function(dispatch) {
-        todoService.put('/' + todo.id, todo).then(({data}) => {
+    const newTodo = {...todo};
+    newTodo.isDone = !newTodo.isDone;
+
+    return (dispatch) => {
+        todoService.put('/' + todo.id, newTodo).then(({data}) => {
             dispatch(toggleTask(data))
         });
     }
